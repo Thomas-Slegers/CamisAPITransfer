@@ -46,7 +46,8 @@ public class SyncTimesheetService {
 
         Flux<SyncResult> completed = Flux.just(new SyncResult(
                 new EmployeeIdentification(
-                        new ResourceId("0"), "CAMIS COMPLETED"),
+                        new ResourceId("-1"),
+                        "CAMIS COMPLETED"),
                 SyncResultType.SUCCESS,
                 new CamisWorkorderInfo(LocalDate.now(),
                         "CAMIS COMPLETED",
