@@ -54,6 +54,7 @@ public class SyncTimesheetService {
                         new WorkOrder("CAMIS COMPLETED")),
                 HoursInfo.inputHours(0.0)));
 
+        logger.info("STARTING TO SYNC TIMESHEETS");
         Flux<SyncResult> syncResults =
                 fromIterable(inputEmployees)
                         .flatMap(inputEmployee ->
