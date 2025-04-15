@@ -46,12 +46,12 @@ public class SyncTimesheetService {
 
         Flux<SyncResult> completed = Flux.just(new SyncResult(
                 new EmployeeIdentification(
-                        new ResourceId("-1"),
+                        new ResourceId("-9999999"),
                         "CAMIS COMPLETED"),
                 SyncResultType.SUCCESS,
                 new CamisWorkorderInfo(LocalDate.now(),
                         "CAMIS COMPLETED",
-                        new WorkOrder("CAMIS COMPLETED")),
+                        new WorkOrder("-9999999")),
                 HoursInfo.inputHours(0.0)));
 
         logger.info("STARTING TO SYNC TIMESHEETS");
